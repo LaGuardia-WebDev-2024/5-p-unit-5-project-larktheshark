@@ -1,0 +1,287 @@
+<!-- Unit 5 Project
+Requirements
+[] <div> and <span>
+[y] height: and width:
+[y] margin: and padding: 
+[  ] Three Images
+
+Select ONE Additional Feature to Add  
+[ no ] Feature 1 - Flexbox
+[ no ] Feature 2 - Flip Card
+[ y] Feature 3 - Navbar
+[ no ] Feature 4 - Shaking Animation
+[ no ] Feature 5 - Gradient Background
+[ no ] Feature 6 - Spotify Playlist
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unit 5 Project</title>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        overflow: hidden;
+        postition: fixed;
+        top: 0;
+        width: 100%;
+      }
+      li {
+        display: inline;
+      }
+      li a {
+        text-decoration: none;
+        padding: 10px;
+        background-color: #b01504;
+        color: #ffffff;
+      }
+      body {
+        background-color: black;
+      }
+      .shows {
+        font-family: Fascinate Inline;
+        background-color: #b01504;
+        color: white;
+        width: 350px;
+        height: 150px;
+        margin: 70px;
+        text-align: center;
+      }
+      .lag {
+        width: 250px;
+        margin: 70px;
+        border: 14px solid #ffffff;
+        padding: 30px;
+      }
+      .home-text {
+        color: #ffffff;
+        margin: 70px;
+      }
+      .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px;
+      }
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+      .flip-card-back {
+        background-color: dodgerblue;
+        color: white;
+        transform: rotateY(180deg);
+        height: 350px;
+      }
+      .flip-card2 {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px;
+      }
+      .flip-card-inner2 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+      .flip-card2:hover .flip-card-inner2 {
+        transform: rotateY(180deg);
+      }
+      .flip-card-front2,
+      .flip-card-back2 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+      .flip-card-front2 {
+        background-color: #bbb;
+        color: black;
+      }
+      .flip-card-back2 {
+        background-color: dodgerblue;
+        color: white;
+        transform: rotateY(180deg);
+        height: 350px;
+      }
+      .flip-card3 {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px;
+      }
+      .flip-card-inner3 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+      .flip-card3:hover .flip-card-inner3 {
+        transform: rotateY(180deg);
+      }
+      .flip-card-front3,
+      .flip-card-back3 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+      .flip-card-front3 {
+        background-color: #bbb;
+        color: black;
+      }
+      .flip-card-back3 {
+        background-color: dodgerblue;
+        color: white;
+        transform: rotateY(180deg);
+        height: 350px;
+      }
+      .main {
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shows.html">Shows</a></li>
+      <li><a href="dates.html">Dates</a></li>
+      <li><a href="casts.html">Casts</a></li>
+    </ul>
+
+    <div class="lag">
+      <img
+        src="https://cdn.glitch.global/5357b5a0-8f19-4203-b49a-84aaa4845a83/74807750-b25f-42ac-929b-99c8f65b05bb.Untitled.png?v=1732750756249"
+      />
+    </div>
+    <div class="shows">
+      <h1>
+        SHOWS
+      </h1>
+    </div>
+
+    <div class="main">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img
+              src="https://cdn.glitch.global/5357b5a0-8f19-4203-b49a-84aaa4845a83/48939625-a443-4d27-bb1b-2d695b77ced7.istockphoto-1372579004-612x612.jpg?v=1732753706711"
+              alt="Avatar"
+              style="width: 300px; height: 350px"
+            />
+          </div>
+          <div class="flip-card-back">
+            <h1>PEOPLE, PLACES, AND THINGS</h1>
+            <p>
+              The play follows Emma, an actress struggling with addiction, as
+              she checks into rehab after a public breakdown. Defiant and
+              skeptical of treatment, she battles with withdrawal, trauma, and
+              the blurred line between her roles on stage and in life. Through
+              intense therapy, Emma confronts her painful past and the "People,
+              Places, and Things" that trigger her, in a gripping exploration of
+              addiction, identity, and recovery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="flip-card2">
+        <div class="flip-card-inner2">
+          <div class="flip-card-front2">
+            <img
+              src="https://cdn.glitch.global/5357b5a0-8f19-4203-b49a-84aaa4845a83/623e3528-d488-4be9-aefe-8094fa04216d.Untitled.jpg?v=1732754430332"
+              alt="Avatar"
+              style="width: 300px; height: 350px"
+            />
+          </div>
+          <div class="flip-card-back2">
+            <h1>THE GOOD PLACE</h1>
+            <p>
+              Eleanor Shellstrop finds herself in an idyllic afterlife, "The
+              Good Place," only to realize she doesn't belong there due to a
+              clerical error- her life on earth was anything but "good".
+              Desperate to avoid being sent to The Bad Place, she scrambles to
+              reform her ways, teaming up with an eccentric group of fellow
+              residents. Together, they face absurd challenges, unexpected
+              twists, and profound questions about what it truly means to be a
+              good person.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="flip-card3">
+        <div class="flip-card-inner3">
+          <div class="flip-card-front3">
+            <img
+              src="https://m.media-amazon.com/images/I/5183CT06SGL._AC_UF894,1000_QL80_.jpg"
+              alt="Avatar"
+              style="width: 300px; height: 350px"
+            />
+          </div>
+          <div class="flip-card-back3">
+            <h1>WHO'S AFRAID OF VIRGINIA WOOLF?</h1>
+            <p>
+              George and Martha, a middle-aged couple, invite a younger couple,
+              Nick and Honey, over for late-night drinks after a univeristy
+              event. What starts as casual conversation quickly spirals into a
+              brutal, emotional battle. As George and Martha draw their guests
+              into their intense, often cruel games. As the evening unravels,
+              long-hidden truths emerge, exposing the raw, fractured layers of
+              their marriage. Through sharp dialogue and dark humor, the play
+              delves into themes of illusion, reality, and the complexities of
+              human relationships.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
